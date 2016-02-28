@@ -1,0 +1,13 @@
+<div layout="row" ng-controller="UsersController as ul">
+
+    <div ng-include="'app/layout/sidebar.html'"></div>
+
+    <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+        <ht-top-nav navline="vm.navline"></ht-top-nav>
+
+        <md-content ui-view flex id="content"></md-content>
+
+    </div>
+
+</div>

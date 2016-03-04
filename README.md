@@ -8,7 +8,7 @@
 
 >No moreover boring overused Bootstrap. Styling used in this app is [Angular Materials](https://material.angularjs.org/latest/layout/introduction) based on [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
-**Coming Soon: Firebase features like Chat and Facebook intergrations
+*Coming Soon: Firebase features like Chat and Facebook intergrations*
 
 ## Prerequisites
 

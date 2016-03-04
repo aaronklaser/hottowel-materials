@@ -1,10 +1,36 @@
-<md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-<h2>{{ul.selected.name}}</h2>
-<p>{{ul.selected.content}}</p>
+<md-content>
 
-<md-button class="contact" md-no-ink ng-click="ul.makeContact(ul.selected)"
-           aria-label="Share with {{ ul.selected.name }}">
-    <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
-    <md-icon md-svg-icon="share"></md-icon>
-</md-button>
+    <md-list>
+        <md-subheader class="md-no-sticky">{{vm.people.length}} contacts</md-subheader>
+        <md-list-item ng-repeat="p in vm.people">
+            <md-button ng-click="vm.makeContact(p)" ng-class="{'selected' : vm.isCurrent(p)}">
+                <md-icon md-svg-icon="{{p.avatar}}" class="avatar"></md-icon>
+                {{p.firstName}} {{p.lastName}}
+            </md-button>
+        </md-list-item>
+    </md-list>
+
+</md-content>
+
+
+<script type="text/ng-template" id="contactSheet.html">
+
+    <md-bottom-sheet class="md-list md-has-header">
+
+        <md-subheader>
+            Contact: <span class="name">{{cp.user.firstName}} {{cp.user.lastName}}</span>
+        </md-subheader>
+
+        <md-list>
+            <md-item ng-repeat="item in cp.actions">
+                <md-button ng-click="cp.contactUser(item)" id="item_{{$index}}">
+                    <md-icon md-svg-icon="{{ item.icon_url }}"></md-icon>
+                    {{item.name}}
+                </md-button>
+            </md-item>
+        </md-list>
+
+    </md-bottom-sheet>
+
+</script>
 

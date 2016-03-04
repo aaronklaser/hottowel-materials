@@ -1,10 +1,14 @@
-# Adventure
+# HotTowel Materials
 
-**Generated from HotTowel Angular**
+**Generated from HotTowel Angular and Angular Materials**
 
 >*Opinionated Angular style guide for teams by [@john_papa](//twitter.com/john_papa)*
 
->More details about the styles and patterns used in this app can be found in my [Angular Style Guide](https://github.com/johnpapa/angularjs-styleguide) and my [Angular Patterns: Clean Code](http://jpapa.me/ngclean) course at [Pluralsight](http://pluralsight.com/training/Authors/Details/john-papa) and working in teams.
+>More details about the patterns used in this app can be found in John Papa's [Angular Style Guide](https://github.com/johnpapa/angularjs-styleguide) and [Angular Patterns: Clean Code](http://jpapa.me/ngclean) course at [Pluralsight](http://pluralsight.com/training/Authors/Details/john-papa) and working in teams.
+
+>No moreover boring overused Bootstrap. Styling used in this app is [Angular Materials](https://material.angularjs.org/latest/layout/introduction) based on [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
+
+**Coming Soon: Firebase features like Chat and Facebook intergrations
 
 ## Prerequisites
 
@@ -77,12 +81,18 @@ app --> [
         ],
         app.widgets,
 		app.core --> [
+			ngMaterial
 			ngAnimate,
 			ngSanitize,
 			ui.router,
+			ngplus,
+			firebase,
 			blocks.exception,
 			blocks.logger,
 			blocks.router
+		],
+		app.user --> [
+		    app.core
 		]
     ]
 ```

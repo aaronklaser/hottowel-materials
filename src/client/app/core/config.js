@@ -37,7 +37,10 @@
             .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
             .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
             .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
-            .icon("phone"      , "./assets/svg/phone.svg"       , 512);
+            .icon("phone"      , "./assets/svg/phone.svg"       , 512)
+            .iconSet("actions", "./bower_components/material-design-icons/sprites/svg-sprite/svg-sprite-action.svg", 24)
+            .iconSet("communication", "./bower_components/material-design-icons/sprites/svg-sprite/svg-sprite-communication.svg", 24)
+        ;
 
         $mdThemingProvider.theme('default')
             .primaryPalette('brown')

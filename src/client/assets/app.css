@@ -26,9 +26,9 @@ md-icon.avatar {
   margin-right: 20px;
 }
 
-  md-list .md-button.selected {
+md-list .md-button.selected {
     color: #03a9f4;
-  }
+}
 
 
 button#main {
@@ -37,6 +37,16 @@ button#main {
 
 md-sidenav > md-toolbar {
   height:64px;
+}
+
+.sidenav-icon {
+    position:relative;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    vertical-align: middle;
 }
 
 md-list-item {
@@ -108,4 +118,22 @@ span.name {
   font-weight: bold;
   font-size:1.1em;
   padding-left:5px;
+}
+
+/* Tables */
+
+.md-table {
+
+}
+
+.md-table > md-divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.md-table-header {
+    font-weight: bold;
+}
+
+.md-table-row {
+    margin-bottom: 10px;
 }

@@ -1,0 +1,71 @@
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Upcoming Event</span>
+                    <span class="md-subhead">May 18 - 19, 2015</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p class=".md-body-1">
+                    Castle Resort, Neverland
+                </p>
+            </md-card-content>
+        </md-card>
+
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">People</span>
+                    <!--<span class="md-subhead">Small</span>-->
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+
+                <div layout="column" class="md-table">
+                    <div flex layout="row" class="md-table-header">
+                        <div flex class=".md-body-2">First Name</div>
+                        <div flex class=".md-body-2">Last Name</div>
+                        <div flex="10" class=".md-body-2">Age</div>
+                        <div flex class=".md-body-2">Location</div>
+                    </div>
+                    <md-divider></md-divider>
+                    <div flex layout="row" ng-repeat="p in vm.people" class="md-table-row">
+                        <div flex class=".md-body-1">{{p.firstName}}e</div>
+                        <div flex class=".md-body-1">{{p.lastName}}</div>
+                        <div flex="10" class=".md-body-1">{{p.age}}</div>
+                        <div flex class=".md-body-1">{{p.location}}n</div>
+                    </div>
+                </div>
+            </md-card-content>
+        </md-card>
+
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Messages</span>
+                    <span class="md-subhead">{{vm.messageCount}} unread messages</span>
+                </md-card-title-text>
+            </md-card-title>
+        </md-card>
+
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{vm.news.title}}</span>
+                    <span class="md-subhead">{{vm.news.subtitle}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p class=".md-body-1">
+                    {{vm.news.description}}
+                </p>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>

@@ -1,0 +1,12 @@
+.generate-icon-sizes(8);
+
+.generate-icon-sizes(@n, @i: 1) when (@i =< @n) {
+    .md-@{i} {
+        width: (@i * 16);
+        height: (@i * 16);
+    }
+
+    .generate-icon-sizes(@n, (@i + 1));
+}
+
+

@@ -5,16 +5,31 @@
         .module('app.layout')
         .controller('SidebarController', SidebarController);
 
-    SidebarController.$inject = ['$state', 'routerHelper'];
+    SidebarController.$inject = ['$state', 'routerHelper', '$mdSidenav'];
     /* @ngInject */
-    function SidebarController($state, routerHelper) {
+    function SidebarController($state, routerHelper, $mdSidenav) {
         var vm = this;
         var states = routerHelper.getStates();
         vm.isCurrent = isCurrent;
+        vm.toggleList   = toggleList;
+        vm.selectRoute = selectRoute;
 
         activate();
 
-        function activate() { getNavRoutes(); }
+        function activate() {
+            getNavRoutes();
+        }
+
+        /**
+         * Hide or Show the 'left' sideNav area
+         */
+        function toggleList() {
+            $mdSidenav('left').toggle();
+        }
+
+        function selectRoute ( route ) {
+            $state.go(route);
+        }
 
         function getNavRoutes() {
             vm.navRoutes = states.filter(function(r) {

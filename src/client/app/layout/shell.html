@@ -1,13 +1,22 @@
-<div layout="row" ng-controller="UsersController as ul">
+<div flex layout="row" ng-controller="ShellController as vm">
 
-    <div ng-include="'app/layout/sidebar.html'"></div>
+    <div layout="row" ng-controller="SidebarController as vm" ng-include="'app/layout/sidebar.html'"></div>
 
     <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
 
         <ht-top-nav navline="vm.navline"></ht-top-nav>
 
-        <md-content ui-view flex id="content"></md-content>
+        <md-content ui-view flex id="content" class="shuffle-animation"></md-content>
 
+    </div>
+
+    <div ngplus-overlay
+         ngplus-overlay-delay-in="50"
+         ngplus-overlay-delay-out="700"
+         ngplus-overlay-animation="dissolve-animation">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+
+        <div class="page-spinner-message overlay-message .md-body-1" >{{vm.busyMessage}}</div>
     </div>
 
 </div>

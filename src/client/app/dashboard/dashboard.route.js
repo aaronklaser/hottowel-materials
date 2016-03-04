@@ -1,11 +1,8 @@
-/**
- * Created by aaronklaser on 2/27/16.
- */
 (function() {
     'use strict';
 
     angular
-        .module('app.users')
+        .module('app.dashboard')
         .run(appRun);
 
     appRun.$inject = ['routerHelper'];
@@ -17,17 +14,17 @@
     function getStates() {
         return [
             {
-                state: 'users',
+                state: 'dashboard',
                 config: {
-                    url: '/users',
-                    templateUrl: 'app/users/users.html',
-                    controller: 'UsersController',
+                    url: '/',
+                    templateUrl: 'app/dashboard/dashboard.html',
+                    controller: 'DashboardController',
                     controllerAs: 'vm',
-                    title: 'Users',
+                    title: 'dashboard',
                     settings: {
-                        nav: 2,
-                        content: 'Users',
-                        icon: 'actions:ic_perm_identity_24px'
+                        nav: 1,
+                        content: 'Dashboard',
+                        icon: 'actions:ic_dashboard_24px'
                     }
                 }
             }

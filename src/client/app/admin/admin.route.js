@@ -1,11 +1,8 @@
-/**
- * Created by aaronklaser on 2/27/16.
- */
 (function() {
     'use strict';
 
     angular
-        .module('app.users')
+        .module('app.admin')
         .run(appRun);
 
     appRun.$inject = ['routerHelper'];
@@ -17,17 +14,17 @@
     function getStates() {
         return [
             {
-                state: 'users',
+                state: 'admin',
                 config: {
-                    url: '/users',
-                    templateUrl: 'app/users/users.html',
-                    controller: 'UsersController',
+                    url: '/admin',
+                    templateUrl: 'app/admin/admin.html',
+                    controller: 'AdminController',
                     controllerAs: 'vm',
-                    title: 'Users',
+                    title: 'Admin',
                     settings: {
-                        nav: 2,
-                        content: 'Users',
-                        icon: 'actions:ic_perm_identity_24px'
+                        nav: 3,
+                        content: 'Admin',
+                        icon: 'actions:ic_settings_applications_24px'
                     }
                 }
             }
